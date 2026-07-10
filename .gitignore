@@ -216,3 +216,40 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+Code snippet
+# ==========================================
+# Node.js / Vite / React (TypeScript)
+# ==========================================
+node_modules/
+/dist
+.eslintcache
+*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# ==========================================
+# AWS Amplify (Gen 2 / Gen 1)
+# ==========================================
+.amplify/
+amplify/.config/
+amplify/mock/
+amplify/backend/awscloudformation/
+amplify_outputs.json
+aws-exports.js
+
+# amplify
+amplify_outputs*
+amplifyconfiguration*
+
+# Amplify backend build and local configuration directories
+.amplify/
+amplify-backup/
+aws-exports.js
+awsconfiguration.json
+amplifyconfiguration.json
+amplifyconfiguration.dart
+
+# Dependencies
+node_modules/

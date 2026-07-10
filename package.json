@@ -1,0 +1,33 @@
+{
+  "name": "t1bd1072026",
+  "version": "1.0.0",
+  "description": "badrock_test_repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yarvalcher/t1bd1072026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Yarvalcher/t1bd1072026/issues"
+  },
+  "homepage": "https://github.com/Yarvalcher/t1bd1072026#readme",
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.23.0",
+    "@aws-amplify/backend-cli": "^1.8.3",
+    "aws-cdk-lib": "^2.244.0",
+    "constructs": "^10.6.0",
+    "esbuild": "^0.28.1",
+    "tsx": "^4.23.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "aws-amplify": "^6.18.0"
+  }
+}
