@@ -5,7 +5,8 @@ applications:
       phases:
         build:
           commands:
-            - npm install --force
+            - cd amplify && npm install --force
+            - cd .. && npm install --force
             - npx amplify deploy --yes
     frontend:
       phases:
@@ -22,3 +23,4 @@ applications:
       cache:
         paths:
           - node_modules/**/*
+          - amplify/node_modules/**/*
