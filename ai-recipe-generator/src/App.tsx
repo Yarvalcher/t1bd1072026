@@ -1,27 +1,12 @@
 import { type FormEvent, useState } from "react";
 import { Loader, Placeholder } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
 import "./App.css";
 import { Amplify } from "aws-amplify";
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
-// import outputs from "../amplify_outputs.json";
+import outputs from "../amplify_outputs.json";
 
-// Temporary configuration until amplify_outputs.json is generated
-const outputs = {
-  data: {
-    url: process.env.VITE_AMPLIFY_GRAPHQL_URL || "",
-    aws_region: process.env.VITE_AWS_REGION || "us-east-1",
-    default_authorization_type: "API_KEY",
-    authorization_types: ["AMAZON_COGNITO_USER_POOLS"],
-    api_key: process.env.VITE_AMPLIFY_API_KEY || ""
-  },
-  auth: {
-    aws_region: process.env.VITE_AWS_REGION || "us-east-1",
-    user_pool_id: process.env.VITE_AMPLIFY_USER_POOL_ID || "",
-    user_pool_client_id: process.env.VITE_AMPLIFY_USER_POOL_CLIENT_ID || ""
-  }
-};
-import "@aws-amplify/ui-react/styles.css";
 Amplify.configure(outputs);
 const amplifyClient = generateClient<Schema>({
   authMode: "userPool",
