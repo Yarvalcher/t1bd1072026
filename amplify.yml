@@ -1,0 +1,25 @@
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - cd ai-recipe-generator
+        - npm install --force
+        - npx amplify deploy --yes
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd ai-recipe-generator
+        - npm ci
+    build:
+      commands:
+        - cd ai-recipe-generator
+        - npm run build
+  artifacts:
+    baseDirectory: ai-recipe-generator/dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - ai-recipe-generator/node_modules/**/*
